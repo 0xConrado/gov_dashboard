@@ -11,4 +11,4 @@ class SecretariaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Secretaria
-        fields = ['id', 'nome', 'descricao', 'servicos']
+        fields = ['id', 'nome', 'servicos']
