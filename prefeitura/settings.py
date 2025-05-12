@@ -23,6 +23,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'secretarias',
+    'corsheaders',
 ]
 
 # Middleware padrão
@@ -34,6 +35,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 # URLs raiz
@@ -98,3 +100,8 @@ STATIC_URL = 'static/'
 
 # Tipo padrão de campo para chaves primárias
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
